@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="Quotes" customModuleProvider="target">
+            <connections>
+                <outlet property="textLabel" destination="zpH-rf-sd0" id="09h-Kw-tM1"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView autoresizesSubviews="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="292"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-rf-sd0">
+                    <rect key="frame" x="38" y="128" width="372" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="xyN-3E-RWb"/>
+                    </constraints>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="It's not just how it looks like and feels like. Design is also how it works - Steve Jobs" id="Ndw-7E-Fcb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yv1-Gu-5RV">
+                    <rect key="frame" x="171" y="-7" width="106" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="1RJ-Gn-So0"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="c2T-IS-V2P">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quitWithSender:" target="-2" id="pfa-pD-P5u"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Cy0-ij-0kg">
+                    <rect key="frame" x="-2" y="-3" width="36" height="297"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="nUg-eX-X0G"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSGoLeftTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YjU-g7-965">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goLeftWithSender:" target="-2" id="9ER-N3-TG9"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="kjL-Fd-lji">
+                    <rect key="frame" x="414" y="-3" width="36" height="297"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="eJe-Wh-Ae7"/>
+                    </constraints>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSGoRightTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P9a-NA-4Uc">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goRightWithSender:" target="-2" id="OxW-Ad-9a6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zpH-rf-sd0" firstAttribute="trailing" secondItem="Hz6-mo-xeY" secondAttribute="trailing" constant="-40" id="2dL-d4-9AR"/>
+                <constraint firstItem="Cy0-ij-0kg" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="56k-ac-1Qs"/>
+                <constraint firstItem="Cy0-ij-0kg" firstAttribute="bottom" secondItem="Hz6-mo-xeY" secondAttribute="bottom" id="6I0-MW-IYN"/>
+                <constraint firstAttribute="bottom" secondItem="yv1-Gu-5RV" secondAttribute="bottom" id="7ZZ-Fn-Sax"/>
+                <constraint firstAttribute="trailing" secondItem="kjL-Fd-lji" secondAttribute="trailing" id="RMb-za-TYT"/>
+                <constraint firstItem="Cy0-ij-0kg" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="SN5-rd-N1L"/>
+                <constraint firstAttribute="bottom" secondItem="kjL-Fd-lji" secondAttribute="bottom" id="TKj-Bd-Avi"/>
+                <constraint firstItem="yv1-Gu-5RV" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="hgp-GG-2a4"/>
+                <constraint firstItem="zpH-rf-sd0" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="40" id="nXZ-po-hWQ"/>
+                <constraint firstItem="kjL-Fd-lji" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="nZP-1m-aIT"/>
+                <constraint firstItem="zpH-rf-sd0" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="p2p-na-YKk"/>
+            </constraints>
+            <point key="canvasLocation" x="-7" y="244"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+    </resources>
+</document>
